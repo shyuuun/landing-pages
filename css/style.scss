@@ -1,0 +1,182 @@
+@import 'colors';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: "Nunito Sans", sans-serif;
+    color: #eee;
+}
+
+header { 
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 70%;
+    z-index: 1;
+}
+
+
+.first { 
+    @include full-fix-page;
+    background: rgb(72,64,59);
+    background: linear-gradient(180deg, rgba(72,64,59,1) 76%, rgba(52,52,52,1) 97%);
+    color: #eee;
+    position: relative;
+
+    @include flex-center;
+
+    .middle {
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        gap: 1rem;
+        font-size: 3rem;
+        font-family: "Dancing Script", cursive;
+        z-index: 1;
+
+        p {
+            font-size: 2rem;
+        }
+    }
+
+}
+
+.cards {
+    @include half-page;
+    background-color: $coffee;
+    padding: 2em 0 0 0;
+    .cards-header {
+        display: flex;
+        justify-content: space-around;
+
+        .cards-header-select {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            p { font-size: 1.3rem; }
+
+
+
+            a {
+                font-size: 1.3rem;
+                color: white;
+                text-decoration: none;
+
+                &::after{ 
+                    content: " >";
+                }
+            }
+        }
+    }
+}
+
+// Utils
+
+.bigger-text { 
+    font-size: 7rem;
+}
+
+.big-text {
+    font-size: 3rem;
+}
+
+.img-container { 
+    outline: 5px solid $brown;
+    outline-offset: 3em;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+    }
+
+    &.left {
+        left: 0;
+
+    }
+    &.right {
+        right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 200px;
+        height: 200px;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+.curvy-left {
+    @include curvy-left;
+}
+
+.curvy-right { 
+    @include curvy-right;
+}
+
+
+
+.line-header {
+    font-size: 5rem;
+    font-family: 700;
+    color: #eee;
+    position: relative;
+    font-family: "Dancing Script", cursive;
+
+
+    &::before,
+    &::after {
+        content: "";
+        height: 5px;
+        width: 100%;
+        position: absolute;
+    }
+
+    &::before {
+        background-color: #eee;
+        max-width: 30%;
+        left: 0;
+        top: 50%;
+    }
+    &::after {
+        background-color: #eee;
+        top: 50%;
+        right: 0;
+        max-width:30%;
+    }
+
+    @media screen and (max-width: 768px) {
+        &::before {
+            max-width: 10%;
+        }
+        &::after {
+            max-width: 10%;
+        }
+    }
+}
+
+
+
+

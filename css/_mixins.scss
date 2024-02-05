@@ -1,0 +1,22 @@
+@mixin full-fix-page {
+    height: 100vh;
+}
+
+@mixin half-page {
+    max-height: 100vh;
+    min-height: 50vh;
+}
+
+@mixin flex-center { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin curvy-left {
+    border-radius: 0 30% 30% 0;
+}
+
+@mixin curvy-right {
+    border-radius: 30% 0 0 30%;
+}

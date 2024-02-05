@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #eee;
+}
+
+header {
+  text-align: center;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  z-index: 1;
+}
+
+.first {
+  height: 100vh;
+  background: rgb(72, 64, 59);
+  background: linear-gradient(180deg, rgb(72, 64, 59) 76%, rgb(52, 52, 52) 97%);
+  color: #eee;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first .middle {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1rem;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  z-index: 1;
+}
+.first .middle p {
+  font-size: 2rem;
+}
+
+.cards {
+  max-height: 100vh;
+  min-height: 50vh;
+  background-color: #343434;
+  padding: 2em 0 0 0;
+}
+.cards .cards-header {
+  display: flex;
+  justify-content: space-around;
+}
+.cards .cards-header .cards-header-select {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cards .cards-header .cards-header-select p {
+  font-size: 1.3rem;
+}
+.cards .cards-header .cards-header-select a {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+}
+.cards .cards-header .cards-header-select a::after {
+  content: " >";
+}
+
+.bigger-text {
+  font-size: 7rem;
+}
+
+.big-text {
+  font-size: 3rem;
+}
+
+.img-container {
+  outline: 5px solid #75604f;
+  outline-offset: 3em;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.6;
+}
+.img-container.left {
+  left: 0;
+}
+.img-container.right {
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .img-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .img-container {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.curvy-left {
+  border-radius: 0 30% 30% 0;
+}
+
+.curvy-right {
+  border-radius: 30% 0 0 30%;
+}
+
+.line-header {
+  font-size: 5rem;
+  font-family: 700;
+  color: #eee;
+  position: relative;
+  font-family: "Dancing Script", cursive;
+}
+.line-header::before, .line-header::after {
+  content: "";
+  height: 5px;
+  width: 100%;
+  position: absolute;
+}
+.line-header::before {
+  background-color: #eee;
+  max-width: 30%;
+  left: 0;
+  top: 50%;
+}
+.line-header::after {
+  background-color: #eee;
+  top: 50%;
+  right: 0;
+  max-width: 30%;
+}
+@media screen and (max-width: 768px) {
+  .line-header::before {
+    max-width: 10%;
+  }
+  .line-header::after {
+    max-width: 10%;
+  }
+}/*# sourceMappingURL=style.css.map */
