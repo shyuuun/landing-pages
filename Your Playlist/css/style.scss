@@ -10,8 +10,16 @@
     box-sizing: border-box;
 }
 
+
+
 body { 
     font-family: "Spectral", serif;
+}
+
+main { 
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 section {
@@ -21,6 +29,8 @@ section {
     flex-direction: column;
     background-color: $sunny;
     color: $brown;
+
+    scroll-snap-align: start;
     
     header { 
         border-bottom: 3px solid $brown;
@@ -52,7 +62,18 @@ section {
                 @include spectral-semibold-italic;
                 @include font-xl;
             }
+            p {
+                @include font-m;
+            }
         }
     }
 }
+
+img { 
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
 
