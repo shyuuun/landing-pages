@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spectral", serif;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6e0b5;
+  color: #66545e;
+}
+section header {
+  border-bottom: 3px solid #66545e;
+  width: 100%;
+  height: 4rem;
+}
+section .content {
+  flex: 1;
+  border-style: solid;
+  border-width: 0 3px 0 3px;
+  margin: 0 5em 0 5em;
+}
+section footer {
+  border-top: 3px solid #66545e;
+  width: 100%;
+  height: 4rem;
+}
+section:first-child header {
+  height: 6em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em 0 2em;
+}
+section:first-child header h1 {
+  font-family: "Spectral", serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 4rem;
+}/*# sourceMappingURL=style.css.map */

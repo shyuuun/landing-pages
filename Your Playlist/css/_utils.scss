@@ -1,0 +1,21 @@
+
+@mixin flex-cen { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin full-pg { 
+    height: 100vh;
+}
+
+@mixin debug {
+    border: 1px solid red;
+
+    :nth-child(1) {
+        border: 1px solid blue;
+    }
+    :nth-child(2) {
+        border: 1px solid rebeccapurple;
+    }
+}
