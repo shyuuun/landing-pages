@@ -26,17 +26,17 @@ section {
   scroll-snap-align: start;
 }
 section header {
-  border-bottom: 3px solid #66545e;
+  border-bottom: 5px solid #66545e;
   flex: 1;
 }
 section .content {
   border-style: solid;
-  border-width: 0 3px 0 3px;
+  border-width: 0 5px 0 5px;
   margin: 0 5em 0 5em;
   flex: 3 0 70%;
 }
 section footer {
-  border-top: 3px solid #66545e;
+  border-top: 5px solid #66545e;
   flex: 1;
 }
 section:first-child header {
