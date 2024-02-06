@@ -1,3 +1,8 @@
+@mixin maincover { 
+    background: url('../assets/main-cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 @mixin flex-cen { 
     display: flex;

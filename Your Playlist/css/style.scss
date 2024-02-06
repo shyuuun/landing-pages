@@ -71,13 +71,26 @@ section {
             @include maincover;
         }
     }
+
+    &:nth-child(2) {
+        .content { 
+            display: flex;
+            
+            > * {
+                flex: 1;
+            }
+
+            .first-page { 
+                @include flex-cen;
+            }
+            .last-page { 
+                @include maincover;
+            }
+        }
+    }
 }
 
-@mixin maincover { 
-    background: url('../assets/main-cover.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
 
 
 

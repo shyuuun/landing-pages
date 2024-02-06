@@ -59,4 +59,20 @@ section:first-child .content {
   background: url("../assets/main-cover.jpg");
   background-repeat: no-repeat;
   background-position: center;
+}
+section:nth-child(2) .content {
+  display: flex;
+}
+section:nth-child(2) .content > * {
+  flex: 1;
+}
+section:nth-child(2) .content .first-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(2) .content .last-page {
+  background: url("../assets/main-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }/*# sourceMappingURL=style.css.map */
