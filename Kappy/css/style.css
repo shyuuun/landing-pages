@@ -8,18 +8,23 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Nunito Sans", sans-serif;
   color: #eee;
 }
 
 header {
+  overflow-x: hidden;
   text-align: center;
   position: absolute;
   top: 70px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 100%;
   z-index: 1;
 }
 
@@ -48,8 +53,6 @@ header {
 }
 
 .cards {
-  max-height: 100vh;
-  min-height: 50vh;
   background-color: #343434;
   padding: 2em 0 0 0;
 }
@@ -72,6 +75,13 @@ header {
 }
 .cards .cards-header .cards-header-select a::after {
   content: " >";
+}
+.cards.default {
+  max-height: 100vh;
+  min-height: 50vh;
+}
+.cards.expand {
+  height: 100vh;
 }
 
 .bigger-text {
@@ -98,9 +108,11 @@ header {
 }
 .img-container.left {
   left: 0;
+  transition: 500ms;
 }
 .img-container.right {
   right: 0;
+  transition: 500ms;
 }
 @media screen and (max-width: 768px) {
   .img-container {
@@ -127,32 +139,39 @@ header {
   font-size: 5rem;
   font-family: 700;
   color: #eee;
-  position: relative;
   font-family: "Dancing Script", cursive;
 }
-.line-header::before, .line-header::after {
-  content: "";
-  height: 5px;
-  width: 100%;
+@media screen and (max-width: 768px) {
+  .line-header {
+    font-size: 3rem;
+  }
+}
+
+.line-right {
+  transition: 500ms;
   position: absolute;
-}
-.line-header::before {
-  background-color: #eee;
-  max-width: 30%;
-  left: 0;
-  top: 50%;
-}
-.line-header::after {
-  background-color: #eee;
   top: 50%;
   right: 0;
-  max-width: 30%;
+  background-color: #eee;
+  height: 5px;
+  width: 35%;
 }
+
+.line-left {
+  transition: 500ms;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #eee;
+  height: 5px;
+  width: 35%;
+}
+
 @media screen and (max-width: 768px) {
-  .line-header::before {
-    max-width: 10%;
+  .line-right {
+    display: none;
   }
-  .line-header::after {
-    max-width: 10%;
+  .line-left {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

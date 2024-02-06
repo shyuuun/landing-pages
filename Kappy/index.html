@@ -8,13 +8,14 @@
 </head>
 <body>
     <header>
-        <h1 class="line-header" id="line-header">
-            Kappy!         
+        <div class="line-right"></div>
+        <h1 class="line-header">
+            Kappy!
             <img 
             src="assets/coffee-cups.svg" 
-            alt="kappy icon">
+            alt="kappy icon"> 
         </h1>
-
+        <div class="line-left"></div>
     </header>
     <main>
         <section class="first page">
@@ -42,12 +43,15 @@
                 >
             </div>
         </section>
-        <section class="cards page">
+        <section class="cards page default" id="cards">
             <div class="cards-header">
                 <h1 class="big-text">Your moots</h1>
                 <div class="cards-header-select">
                     <p>Your coffee</p>
-                    <a href="#">View All</a>
+                    <a 
+                    href="#cards"
+                    onclick="expand()"
+                    >View All</a>
                 </div>
             </div>
         </section>
